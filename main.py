@@ -63,7 +63,6 @@ def main(page: ft.Page):
             ft.IconButton(icon=ft.Icons.DELETE, on_click=delete_task, icon_color=ft.Colors.RED_400)
         ])
     
-    # ВАЖНО: Добавляем обновление статуса в БД, иначе "Очистить" не поймет, что задача готова
     def toggle_task(task_id, is_completed):
         conn = main_db.sqlite3.connect(main_db.path_db)
         cursor = conn.cursor()
