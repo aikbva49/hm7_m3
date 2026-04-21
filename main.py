@@ -21,10 +21,9 @@ def main(page: ft.Page):
             ))
         page.update()
 
-    # ФУНКЦИЯ ДЛЯ КНОПКИ "ОЧИСТИТЬ ВЫПОЛНЕННЫЕ"
     def clear_completed(e):
-        main_db.delete_completed_tasks() # Удаляем из БД
-        load_tasks() # Обновляем интерфейс
+        main_db.delete_completed_tasks() 
+        load_tasks() 
 
     def view_tasks(task_id, task_text, completed=None):
         checkbox = ft.Checkbox(
