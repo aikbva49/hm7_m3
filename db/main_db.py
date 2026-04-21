@@ -44,7 +44,6 @@ def delete_task(task_id):
         cursor.execute("DELETE FROM tasks WHERE id = ?", (task_id,))
         conn.commit()
 
-# ТА САМАЯ ФУНКЦИЯ ОЧИСТКИ
 def delete_completed_tasks():
     with sqlite3.connect(path_db) as conn:
         cursor = conn.cursor()
